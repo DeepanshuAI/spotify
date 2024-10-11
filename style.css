@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root{
+    --a:0;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.close {
+    display: none;
+}
+
+body {
+    background-color: black;
+    color: rgb(255, 255, 255);
+}
+
+.left {
+    width: 25vw;
+    padding: 0px;
+}
+
+.left .close {
+
+    position: absolute;
+    right: 31px;
+    top: 25px;
+    width: 29px;
+}
+
+.right {
+    width: 75vw;
+}
+
+/* Right section scrollbar */
+.right {
+
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+    overflow-x: hidden;
+    /* Hides the horizontal scrollbar */
+    scrollbar-color: #444 #1c1c1c;
+    /* Thumb color and track color */
+    scrollbar-width: thin;
+    /* Thin scrollbar width */
+}
+
+/* Webkit scrollbar customization for right section */
+.right::-webkit-scrollbar {
+    width: 8px;
+    /* Scrollbar width */
+    height: 0;
+}
+
+.right::-webkit-scrollbar-track {
+    background: #1c1c1c;
+    /* Dark background for scrollbar track */
+    border-radius: 10px;
+}
+
+.right::-webkit-scrollbar-thumb {
+    background-color: #444;
+    /* Darker scrollbar thumb */
+    border-radius: 10px;
+    border: 2px solid transparent;
+}
+
+.right::-webkit-scrollbar-thumb:hover {
+    background-color: #888;
+    /* Slightly lighter on hover */
+}
+
+
+.home ul li {
+    width: 20px;
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding-top: 14px;
+}
+
+.heading {
+    background-color:#2c2c2c;
+    width: 100;
+    border-radius: 5px;
+    padding: 23px 14px;
+    align-items: center;
+    display: flex;
+    gap: 15px;
+    padding-top: 14px;
+    font-size: 13px;
+}
+
+.heading img {
+    width: 25px;
+}
+
+.library {
+    min-height: 80vh;
+    position: relative;
+}
+
+.footer {
+    display: flex;
+    font-size: 10px;
+    gap: 13px;
+    position: absolute;
+    bottom: 0;
+    padding: 30px 10px;
+}
+
+.footer a {
+    color: grey;
+
+}
+
+.right {
+    margin: 16px 0;
+    position: relative;
+}
+
+
+
+.nav {
+
+    display: flex;
+}
+
+.nav img {
+    height: 34px;
+}
+
+.header {
+    background-color: rgb(37, 37, 37);
+    display: flex;
+    justify-content: space-between;
+}
+
+.header>* {
+
+    padding: 20px;
+}
+
+.spotifyPlaylists {
+    padding: 16px;
+
+}
+
+.spotifyPlaylists h2 {
+    padding: 16px;
+
+}
+
+.cardContainer {
+    margin: 30px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    max-height: 60vh;
+}
+
+.card {
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #252525;
+    position: relative;
+    transition: all .9s;
+}
+
+.card:hover {
+    background-color: rgb(121, 121, 121);
+    cursor: pointer;
+    --a: 1;
+}
+
+
+.circle {
+    height: 48px;
+    width: 48px;
+    border-radius: 100%;
+    background-color: #1fdf64;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 168px;
+    right: 18px;
+    opacity: var(--a);
+    transition: all 1s ease-in;
+}
+
+.circle img {
+    padding-left: 4px;
+    height: 60%;
+    justify-content: center;
+}
+
+.card>* {
+    padding-top: 10px;
+}
+
+.card img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.buttons>* {
+    margin: 0 12px;
+}
+
+.signupbtn {
+    background-color: rgb(34, 34, 34);
+    color: rgb(156, 156, 156);
+
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.signupbtn:hover {
+    font-weight: bold;
+    color: white;
+}
+
+.loginbtn {
+    background-color: white;
+    border-radius: 23px;
+    color: black;
+    padding: 10px;
+    width: 79px;
+    cursor: pointer;
+}
+
+.loginbtn:hover {
+
+    font-weight: bold;
+
+}
+
+.playbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 30px;
+    filter: invert(1);
+    background: #e2d9d9;
+    border-radius: 10px;
+    width: 73.1%;
+    padding: 12px;
+    min-height: 40px;
+}
+
+.seekbar {
+    height: 4px;
+    width: 98%;
+    background: rgb(0, 0, 0);
+    border-radius: 10px;
+    position: absolute;
+    bottom: 8px;
+    margin: 6px;
+    cursor: pointer;
+}
+
+.circle2 {
+    width: 13px;
+    height: 13px;
+    border-radius: 13px;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    bottom: 5px;
+    left: 0%;
+    transition: left 0s;
+}
+
+.songbuttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+.songbuttons img {
+    cursor: pointer;
+}
+
+.hamburgerr {
+    width: 30px;
+    /* Adjust size if necessary */
+    height: auto;
+    /* Ensure aspect ratio is maintained */
+    display: none;
+    /* Ensure it's not set to display: none */
+}
+
+.hamburgerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+}
+
+.songlist {
+    max-height: 450px;
+    /* Set a fixed height for the scrollable area */
+    overflow-y: auto;
+    /* Enable vertical scroll */
+    margin-bottom: 44px;
+}
+
+/* Styling the scrollbar */
+.songlist::-webkit-scrollbar {
+    width: 8px;
+    /* Set width of scrollbar */
+}
+
+.songlist::-webkit-scrollbar-track {
+    background: #1f1f1f;
+    /* Track background matching dark theme */
+}
+
+.songlist::-webkit-scrollbar-thumb {
+    background-color: #888;
+    /* Dark gray for the scrollbar thumb */
+    border-radius: 10px;
+    /* Rounded edges */
+}
+
+.songlist::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+    /* Darker gray on hover */
+}
+
+
+.songlist {
+    scrollbar-color: #888 #1f1f1f;
+    /* Thumb and track colors */
+    scrollbar-width: thin;
+    /* Make scrollbar thinner */
+}
+
+.songlist ul {
+
+    padding: 0 12px;
+}
+
+.songlist ul li {
+    list-style-type: decimal;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    cursor: pointer;
+    padding: 12px 0;
+    border: 1px solid rgba(146, 143, 143, 0.491);
+    margin: 12px 0;
+    padding: 13px;
+    border-radius: 5px;
+}
+
+.songlist li img {
+    width: 30px;
+    height: auto;
+}
+
+.songlist .info {
+    font-size: 13px;
+    width: 344px;
+}
+
+.info div {
+    word-break: break-all;
+}
+
+.playNow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.playNow span {
+    font-size: 15px;
+    width: 64px;
+    padding: 12px;
+}
+
+/* .playNow img {
+    width: 24px;
+    height: auto;
+} */
+.songinfo {
+    color: black;
+    padding: 0 12px;
+    width: 250px;
+    white-space: nowrap;
+    /* Prevents text from wrapping to the next line */
+    overflow: hidden;
+    /* Hides the overflow text */
+    text-overflow: ellipsis;
+    /* Adds the ellipsis (...) for overflowing text */
+    max-width: 100%;
+    /* Ensures it takes up the available space */
+
+}
+
+.songtime {
+    width: 125px;
+    color: black;
+    padding: 0 12px;
+    width: 250px;
+
+}
+
+.abovebar {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    width: 100%;
+}
+
+@media (max-width: 1200px) {
+    .left {
+
+        position: absolute;
+        left: -120%;
+        transition: all .3s;
+        z-index: 1;
+        width: 373px;
+        padding: 0;
+    }
+
+    .right {
+        width: 100vw;
+    }
+    .circle {
+        height: 48px;
+        width: 48px;
+        border-radius: 100%;
+        background-color: #1fdf64;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 228px;
+        right: 18px;
+        opacity:1;
+        transition: all 1s ease-in;
+    }
+
+    .playbar {
+        height: 80px;
+        width: calc(100vw - 55px);
+        
+    }
+
+    .seekbar {
+        width: calc(100vw - 70px);
+    }
+
+    .hamburgerr {
+        display: block;
+    }
+
+    .right {
+        margin: 0;
+    }
+
+    .card {
+        width: 44vw;
+    }
+
+    .cardContainer {
+        justify-content: center;
+    }
+
+    .close {
+        display: block;
+    }
+}
+@media (max-width: 500px){
+    .card{
+        width:64vw ;
+    }
+}
