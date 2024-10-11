@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GeetSpotifly</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="utility.css">
+</head>
+
+<body>
+  <div class="container flex bg-black">
+    <!-- Left Sidebar -->
+    <div class="left border bg-black">
+      <div class="close invert">
+        <img src="imgs/close.svg" alt="close">
+      </div>
+      <div class="home bg-grey rounded m-1 p-1">
+        <div class="logo"><img class="invert" height="24px" src="imgs/logo.png" alt="logo">Geet</div>
+        <ul>
+          <li><img class="invert" src="imgs/home.svg" alt="home"></li>
+          <li><img class="invert" src="imgs/search.svg" alt="search"></li>
+        </ul>
+      </div>
+
+      <div class="library bg-grey rounded m-1 p-1">
+        <div class="heading">
+          <img class="invert" src="imgs/playlist.svg" alt="">
+          <h2>Your Library</h2>
+        </div>
+
+        <div class="songlist">
+          <ul>
+            <!-- Song list here -->
+          </ul>
+        </div>
+
+        <div class="footer">
+          <div><a href="#"><span>Legal</span></a></div>
+          <div><a href="#"><span>Safety and privacy center</span></a></div>
+          <div><a href="#"><span>Privacy Policy</span></a></div>
+          <div><a href="#"><span>Cookies</span></a></div>
+          <div><a href="#"><span>About ads</span></a></div>
+          <div><a href="#"><span>Accessibilities</span></a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Content -->
+    <div class="right bg-grey rounded">
+      <div class="header">
+        <div class="nav invert">
+          <div class="hamburgerContainer">
+            <!-- Hamburger icon with class 'hamburger' -->
+            <img class="hamburgerr" src="imgs/hamburgerr.svg" alt="hamburger icon">
+            <img src="imgs/arrow-left-5-svgrepo-com.svg" alt="left arrow">
+            <img src="imgs/right-arrow-svgrepo-com.svg" alt="right arrow">
+          </div>
+        </div>
+
+        <div class="buttons">
+          <button class="signupbtn">Sign Up</button>
+          <button class="loginbtn">Log in</button>
+        </div>
+      </div>
+
+      <!-- Main Playlist Section -->
+      <div class="spotifyPlaylists">
+        <h2>Spotify Playlist</h2>
+        <div class="cardContainer"> </div>
+
+        <!-- Playbar -->
+        <div class="playbar">
+          <div class="seekbar">
+            <div class="circle2"></div>
+          </div>
+          <div class="abovebar">
+            <div class="songinfo"></div>
+            <div class="songbuttons">
+              <img width="35" id="previous" src="imgs/prevsong.svg" alt="previous song">
+              <img width="35" id="play" src="imgs/play.svg" alt="play song">
+              <img width="35" id="next" src="imgs/nextsong.svg" alt="next song">
+            </div>
+            <div class="songtime"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript at the end of body -->
+  <script src="script2.js"></script>
+</body>
+
+</html>
