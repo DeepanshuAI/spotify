@@ -36,14 +36,14 @@ async function getSongs(folder) {
         songUL.innerHTML = "";
         for (const song of songs) {
             songUL.innerHTML += `<li>
-                                   <img class="invert" width="34" src="img/music.svg" alt="">
+                                   <img class="invert" width="34" src="imgs/music.svg" alt="">
                                    <div class="info">
                                        <div>${song.replaceAll("%20", " ")}</div>
                                        <div>Artist Name</div>
                                    </div>
                                    <div class="playNow">
                                        <span>Play Now</span>
-                                       <img class="invert" src="img/play.svg" alt="">
+                                       <img class="invert" src="imgs/play.svg" alt="">
                                    </div>
                                  </li>`;
         }
@@ -63,7 +63,7 @@ const playMusic = (track, pause = false) => {
     currentSong.src = `/${currFolder}/` + track;
     if (!pause) {
         currentSong.play();
-        play.src = "pause.svg";
+        play.src = "imgs/pause.svg";
     }
     document.querySelector(".songinfo").textContent = decodeURI(track);
     document.querySelector(".songtime").textContent = "00:00 / 00:00";
@@ -112,7 +112,7 @@ async function displayAlbums() {
                             <img src="${coverImage}" alt="Cover of ${albumData.title}">
                             <div class="play">
                                 <div class="circle">
-                                    <img src="play-svgrepo-com.svg" alt="play button">
+                                    <img src="imgs/play-svgrepo-com.svg" alt="play button">
                                 </div>
                             </div>
                             <h3>${albumData.title}</h3>
@@ -150,10 +150,10 @@ async function main() {
     play.addEventListener("click", () => {
         if (currentSong.paused) {
             currentSong.play();
-            play.src = "pause.svg";
+            play.src = "imgs/pause.svg";
         } else {
             currentSong.pause();
-            play.src = "play.svg";
+            play.src = "imgs/play.svg";
         }
     });
 
@@ -192,6 +192,13 @@ async function main() {
             playMusic(songs[index + 1]);
         }
     });
+        // Play the next song when the current one ends
+        currentSong.addEventListener("ended", () => {
+            let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0]);
+            if ((index + 1) < songs.length) {
+                playMusic(songs[index + 1]);
+            }
+        });
 }
 
 main();
