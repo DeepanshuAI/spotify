@@ -140,7 +140,7 @@ async function displayAlbums() {
 
 async function main() {
     // Initialize with default album (shiva)
-    await getSongs("./songs/shiva");
+    await getSongs("./songs/hari");
     playMusic(songs[0], true);
 
     // Display all albums dynamically
